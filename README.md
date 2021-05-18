@@ -39,3 +39,20 @@
     // *fruitPointer ==> "banana"
     ```
     - `*` in front of a pointer signifies the value whereas `*` in front of a type implies a __pointer to that type__ or type.
+
+- Slices don't behave the same way as structs do with regards receiver functions as they are a **Reference Type**
+    - A receiver function called with slice will modify the value of the slice.
+    - The copy passed to the function will still refer to the underlying array.
+
+## Types :
+
+| Value         | Reference     |
+| -----------   | ------------  |
+| int           | slices        |
+| float         | maps          |
+| string        | channels      |
+| bool          | pointers      |
+| structs       | functions     |
+
+* Value types need to be used with pointers for mutation with receiver functions
+* Reference type can be mutated with the receiver functions
