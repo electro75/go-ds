@@ -22,11 +22,15 @@ func main() {
 		},
 	}
 
-	johnPointer := &john
-	johnPointer.updateName("jim")
+	john.updateName("jim")
+	// the above gives the same result as:
+	// johnPointer := &john
+	// johnPointer.updateName("jim")
 	john.print()
 }
 
+// *person can accept a pointer of type person
+// it can also accept the type person
 func (pointerToPerson *person) updateName(newFirstName string) {
 	(*pointerToPerson).firstName = newFirstName
 

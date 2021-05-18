@@ -37,3 +37,5 @@
     fruitPointer := &fruit
     // fruitPointer ==> address of the value "banana"
     // *fruitPointer ==> "banana"
+    ```
+    - `*` in front of a pointer signifies the value whereas `*` in front of a type implies a __pointer to that type__ or type.
