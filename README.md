@@ -21,4 +21,9 @@
 
     // II
     avocado := fruit{name: "avocado", tast: "unknown"}
+
+    // III
+    var mango fruit
+    mango.name = "mango"
+    mango.taste = "sweet"
 ``` 
