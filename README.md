@@ -26,4 +26,14 @@
     var mango fruit
     mango.name = "mango"
     mango.taste = "sweet"
-``` 
+```
+
+- #### Pointers
+    - A __pointer__ stores the memory address of the variable it points at.
+    - `*pointer` will give the value stored in the address
+    - Example:
+    ```
+    fruit := "banana"
+    fruitPointer := &fruit
+    // fruitPointer ==> address of the value "banana"
+    // *fruitPointer ==> "banana"
