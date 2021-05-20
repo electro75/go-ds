@@ -44,6 +44,37 @@
     - A receiver function called with slice will modify the value of the slice.
     - The copy passed to the function will still refer to the underlying array.
 
+### Maps
+- Very similar to `structs` but also different. The differences are:
+    - Keys of a map should be of the same type, so should the values. In a struct the values can be of completely different types.
+    - values cannot be accessed using the dot notation
+    - In a map, all the keys are indexed which makes iteration over a map possible. In Struct keys are not indexed so iteration over keys is not possible.
+    - A Map is __Reference Type__ whereas a struct is a __Value Type__.
+    - Generally, a map is used to represent a collection of related properties. A Struct is used to represent one **thing** and its different properties.
+    - In a Map, all the keys need not be fixed at compile time. All the keys are supposed to be fixed at compile time in a Struct.
+
+- Declaring Maps :
+```
+// I
+fruits := map[string]string {
+    "banana": "good",
+    "avocado": "unknown"
+}
+
+// II
+var fruits map[string]string // empty map
+
+// III
+fruits := make(map[string]string) //empty map
+
+// adding a new key
+fruits["mango"] = "sweet"
+
+// deleting a key
+delete(fruits, "mango")
+```
+
+
 ## Types :
 
 | Value         | Reference     |

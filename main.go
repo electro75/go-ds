@@ -13,6 +13,8 @@ type person struct {
 }
 
 func main() {
+
+	//struct
 	john := person{
 		firstName: "John",
 		lastName:  "Smith",
@@ -27,6 +29,19 @@ func main() {
 	// johnPointer := &john
 	// johnPointer.updateName("jim")
 	john.print()
+
+	//map
+	colors := map[string]string{
+		"red":   "#ff0000",
+		"green": "#4bf745",
+		"blue":  "#0000ff",
+	}
+
+	colors["white"] = "#fff"
+
+	delete(colors, "white")
+
+	printMap(colors)
 }
 
 // *person can accept a pointer of type person
@@ -38,4 +53,10 @@ func (pointerToPerson *person) updateName(newFirstName string) {
 
 func (p person) print() {
 	fmt.Printf("%+v", p)
+}
+
+func printMap(c map[string]string) {
+	for color, hex := range c {
+		fmt.Println("Hex code for ", color, "is ", hex)
+	}
 }
