@@ -36,12 +36,16 @@ func main() {
 		"green": "#4bf745",
 		"blue":  "#0000ff",
 	}
-
 	colors["white"] = "#fff"
-
 	delete(colors, "white")
-
 	printMap(colors)
+
+	// interface
+	eb := englishBot{}
+	sb := spanishBot{}
+
+	printGreeting(eb)
+	printGreeting(sb)
 }
 
 // *person can accept a pointer of type person

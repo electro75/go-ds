@@ -28,22 +28,6 @@
     mango.taste = "sweet"
 ```
 
-- #### Pointers
-    - A __pointer__ stores the memory address of the variable it points at.
-    - `*pointer` will give the value stored in the address
-    - Example:
-    ```
-    fruit := "banana"
-    fruitPointer := &fruit
-    // fruitPointer ==> address of the value "banana"
-    // *fruitPointer ==> "banana"
-    ```
-    - `*` in front of a pointer signifies the value whereas `*` in front of a type implies a __pointer to that type__ or type.
-
-- Slices don't behave the same way as structs do with regards receiver functions as they are a **Reference Type**
-    - A receiver function called with slice will modify the value of the slice.
-    - The copy passed to the function will still refer to the underlying array.
-
 ### Maps
 - Very similar to `structs` but also different. The differences are:
     - Keys of a map should be of the same type, so should the values. In a struct the values can be of completely different types.
@@ -74,6 +58,27 @@ fruits["mango"] = "sweet"
 delete(fruits, "mango")
 ```
 
+- #### Pointers
+    - A __pointer__ stores the memory address of the variable it points at.
+    - `*pointer` will give the value stored in the address
+    - Example:
+    ```
+    fruit := "banana"
+    fruitPointer := &fruit
+    // fruitPointer ==> address of the value "banana"
+    // *fruitPointer ==> "banana"
+    ```
+    - `*` in front of a pointer signifies the value whereas `*` in front of a type implies a __pointer to that type__ or type.
+
+- Slices don't behave the same way as structs do with regards receiver functions as they are a **Reference Type**
+    - A receiver function called with slice will modify the value of the slice.
+    - The copy passed to the function will still refer to the underlying array.
+
+
+- #### Interfaces
+    - They are used to genralise functions with similar logic in order to avoid code repetition.
+    - Once a function name is mentioned inside the interface, that function can be called by similar types during execution,
+    - 
 
 ## Types :
 
