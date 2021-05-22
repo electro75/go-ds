@@ -46,6 +46,9 @@ func main() {
 
 	printGreeting(eb)
 	printGreeting(sb)
+
+	// http w interfaces
+	httpreq()
 }
 
 // *person can accept a pointer of type person

@@ -78,7 +78,8 @@ delete(fruits, "mango")
 - #### Interfaces
     - They are used to genralise functions with similar logic in order to avoid code repetition.
     - Once a function name is mentioned inside the interface, that function can be called by similar types during execution,
-    - 
+    - A value cannot be created from an interface type. (they are not generic types)
+    -
 
 ## Types :
 
