@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 )
@@ -36,6 +37,8 @@ func (sp spanishBot) getGreeting() string {
 	return "Hola, manzanas"
 }
 
+type logWriter struct{}
+
 func httpreq() {
 	res, err := http.Get("http://google.com")
 
@@ -44,7 +47,16 @@ func httpreq() {
 		os.Exit(1)
 	}
 
-	bs := make([]byte, 99999) // the number indicates the number of spaces available in the slice initially.
-	res.Body.Read(bs)
+	// bs := make([]byte, 99999) // the number indicates the number of spaces available in the slice initially.
+	// res.Body.Read(bs)
+	// fmt.Println(string(bs))
+
+	lw := logWriter{}
+	io.Copy(lw, res.Body)
+}
+
+func (logWriter) Write(bs []byte) (int, error) {
 	fmt.Println(string(bs))
+	fmt.Println("Just wrote ", len(bs))
+	return len(bs), nil
 }
